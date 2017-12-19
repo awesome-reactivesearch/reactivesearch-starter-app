@@ -8,8 +8,7 @@
   "dependencies": {
     "@appbaseio/reactivesearch": "^2.0.0-alpha-05",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "reflexbox": "^3.0.0-0"
+    "react-dom": "^16.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

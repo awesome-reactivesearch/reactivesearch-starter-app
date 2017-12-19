@@ -5472,12 +5472,6 @@ redux@^3.7.2:
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
 
-reflexbox@^3.0.0-0:
-  version "3.0.0-0"
-  resolved "https://registry.yarnpkg.com/reflexbox/-/reflexbox-3.0.0-0.tgz#ffc1669be396823a61f74b2d6cd501a7eda1f3c2"
-  dependencies:
-    prop-types "^15.5.10"
-
 regenerate@^1.2.1:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.3.3.tgz#0c336d3980553d755c39b586ae3b20aa49c82b7f"
