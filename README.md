@@ -1,13 +1,19 @@
 ### Reactivesearch Starter App
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project uses ReactiveSearch in a UMD mode.
 
-Step-by-step guide available at [ReactiveSearch Quickstart Doc](https://opensource.appbase.io/reactive-manual/getting-started/reactivesearch.html).
+See the `master` branch if you are interested in a build that uses CRA to do the same.
+
 
 ### Develop
 
-```
-yarn && yarn start
+The scripts are imported in the `index.html` file and the React render code is inside `src/App.js` file.
+
+Open a http-server in the project root dir.
+
+```bash
+python -m SimpleHTTPServer 1234
+# Go to http://localhost:1234
 ```
 
 should open something like this
@@ -20,7 +26,7 @@ should open something like this
 The ReactiveSearch components code resides in `src/App.js` file. For building this app, we use:
 
 1. [appbase.io](https://appbase.io) for the backend, any Elasticsearch cluster/index should work.  
-2. Flex based layout system from [reflexbox](https://github.com/jxnblk/reflexbox), you can use Materialize's or Bootstrap's grid, or roll your own layout - the ReactiveSearch components are layout agnostic.  
+2. A layout system based on Flex. You can easily switch this to using your own layout system or one of the pre-existing ones from libraries like Materialize or Bootstrap.
 3. The following components:
  - **ReactiveBase** - ReactiveBase is the provider component that connects the UI with the backend app.
  - **CategorySearch** - CategorySearch component provides a search box UI with categorized suggestions.
