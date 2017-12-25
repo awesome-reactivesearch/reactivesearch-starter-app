@@ -7,8 +7,8 @@ class App extends Component {
         <ReactiveBase
         app="car-store"
         credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
-          <div style={{ display: "flex", "flex-direction": "row" }}>
-            <div style={{ display: "flex", "flex-direction": "column", "width": "40%" }}>
+          <div style={{ display: "flex", "flexDirection": "row" }}>
+            <div style={{ display: "flex", "flexDirection": "column", "width": "40%" }}>
               <CategorySearch
                 componentId="searchbox"
                 dataField="name"
@@ -16,7 +16,7 @@ class App extends Component {
                 placeholder="Search for cars"
                 style={{
                   padding: "5px",
-                  "margin-top": "10px"
+                  "marginTop": "10px"
                 }}
               />
               <SingleRange
@@ -32,7 +32,7 @@ class App extends Component {
                 defaultSelected="4 stars and up"
                 style={{
                   padding: "5px",
-                  "margin-top": "10px"
+                  "marginTop": "10px"
                 }}
               />
             </div>
@@ -54,7 +54,7 @@ class App extends Component {
               }}
               style={{
                 "width": "60%",
-                "text-align": "center"
+                "textAlign": "center"
               }}
             />
           </div>
