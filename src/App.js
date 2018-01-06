@@ -40,7 +40,6 @@ class App extends Component {
               componentId="result"
               dataField="name"
               title="Results"
-              dataField="name"
               from={0}
               size={6}
               pagination={true}
