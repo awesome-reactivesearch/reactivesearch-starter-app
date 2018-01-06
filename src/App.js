@@ -40,17 +40,18 @@ class App extends Component {
               componentId="result"
               dataField="name"
               title="Results"
+              dataField="name"
               from={0}
               size={6}
               pagination={true}
               react={{
                 and: ["searchbox", "ratingsfilter"]
               }}
-              onData={({_source: res}) => {
+              onData={(res) => {
                 return {
                   image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
                   title: res.name,
-                  desc: res.brand + " " + "★".repeat(res.rating)
+                  description: res.brand + " " + "★".repeat(res.rating)
                 }
               }}
               style={{

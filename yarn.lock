@@ -2,30 +2,31 @@
 # yarn lockfile v1
 
 
-"@appbaseio/reactivecore@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-1.2.0.tgz#e927c51589906a1cfcd94132186ba62f92178516"
+"@appbaseio/reactivecore@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-1.2.6.tgz#999fdc0afa9b4a5a662ff1e9b4ed5950f92a005f"
   dependencies:
     prop-types "^15.6.0"
     redux "^3.7.2"
     redux-thunk "^2.2.0"
 
-"@appbaseio/reactivesearch@^2.0.0-alpha-05":
-  version "2.0.0-alpha-05"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-2.0.0-alpha-05.tgz#740a07082244edc65e585bb34b57f6aa323dd1be"
+"@appbaseio/reactivesearch@^2.0.0-rc":
+  version "2.0.0-rc"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-2.0.0-rc.tgz#c353636039905dff31fbfa8cd3f7a42224ca4f4d"
   dependencies:
-    "@appbaseio/reactivecore" "^1.2.0"
-    appbase-js "^2.2.1"
+    "@appbaseio/reactivecore" "^1.2.6"
+    appbase-js "^2.2.2"
     downshift "^1.22.1"
     emotion "^8.0.11"
     emotion-theming "^8.0.11"
-    polished "^1.9.0"
     prop-types "^15.6.0"
+    react-day-picker "^7.0.5"
     react-emotion "^8.0.11"
     react-redux "^5.0.6"
     redux "^3.7.2"
     rheostat "^2.1.1"
     url-search-params "^0.10.0"
+    xdate "^0.8.2"
 
 "@babel/helper-module-imports@7.0.0-beta.32":
   version "7.0.0-beta.32"
@@ -170,9 +171,9 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
-appbase-js@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/appbase-js/-/appbase-js-2.2.1.tgz#4492a7fa04d47bdbcf94393a7719875244076e30"
+appbase-js@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/appbase-js/-/appbase-js-2.2.2.tgz#169024c91c312ce6a659c2534092bc8b999a0dc8"
   dependencies:
     babel-polyfill "^6.26.0"
     es6-promise "^4.1.1"
@@ -4781,10 +4782,6 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-polished@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.0.tgz#76d277d6610dbcb85477dbba1bd1aa8e642741b6"
-
 portfinder@^1.0.9:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.13.tgz#bb32ecd87c27104ae6ee44b5a3ccbf0ebb1aede9"
@@ -5258,6 +5255,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-day-picker@^7.0.5:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-7.0.6.tgz#9c912707922f149b7f804b33258f25a771758da1"
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react-dev-utils@^4.2.1:
   version "4.2.1"
@@ -6762,6 +6766,10 @@ ws@^2.2.0:
   dependencies:
     safe-buffer "~5.0.1"
     ultron "~1.1.0"
+
+xdate@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/xdate/-/xdate-0.8.2.tgz#d7b033c00485d02695baf0044f4eacda3fc961a3"
 
 xdg-basedir@^2.0.0:
   version "2.0.0"
