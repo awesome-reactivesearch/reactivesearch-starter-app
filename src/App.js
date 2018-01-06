@@ -38,6 +38,7 @@ class App extends Component {
             </div>
             <ResultCard
               componentId="result"
+              dataField="name"
               title="Results"
               from={0}
               size={6}
