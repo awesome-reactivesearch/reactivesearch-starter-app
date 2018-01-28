@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@appbaseio/reactivecore@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-1.2.6.tgz#999fdc0afa9b4a5a662ff1e9b4ed5950f92a005f"
+"@appbaseio/reactivecore@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivecore/-/reactivecore-1.3.1.tgz#319c2cb2242427ae626cb4b57435bfef2d4a8f94"
   dependencies:
     prop-types "^15.6.0"
     redux "^3.7.2"
     redux-thunk "^2.2.0"
 
-"@appbaseio/reactivesearch@^2.0.0-rc":
-  version "2.0.0-rc"
-  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-2.0.0-rc.tgz#c353636039905dff31fbfa8cd3f7a42224ca4f4d"
+"@appbaseio/reactivesearch@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@appbaseio/reactivesearch/-/reactivesearch-2.2.0.tgz#575cd2cb08880f8097b97aeb63511da436633b6b"
   dependencies:
-    "@appbaseio/reactivecore" "^1.2.6"
-    appbase-js "^2.2.2"
+    "@appbaseio/reactivecore" "^1.3.1"
+    appbase-js "^2.2.5"
     downshift "^1.22.1"
     emotion "^8.0.11"
     emotion-theming "^8.0.11"
@@ -171,9 +171,9 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
-appbase-js@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/appbase-js/-/appbase-js-2.2.2.tgz#169024c91c312ce6a659c2534092bc8b999a0dc8"
+appbase-js@^2.2.5:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/appbase-js/-/appbase-js-2.2.7.tgz#0126478490eec8da9467bc46f6c25318b87272d5"
   dependencies:
     babel-polyfill "^6.26.0"
     es6-promise "^4.1.1"
@@ -181,7 +181,7 @@ appbase-js@^2.2.2:
     fetch-everywhere "^1.0.5"
     json-stable-stringify "^1.0.1"
     stream "^0.0.2"
-    url "^0.11.0"
+    url-parser-lite "^0.1.0"
     ws "^2.2.0"
 
 append-transform@^0.4.0:
@@ -6468,6 +6468,10 @@ url-parse@^1.1.8:
   dependencies:
     querystringify "~1.0.0"
     requires-port "~1.0.0"
+
+url-parser-lite@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/url-parser-lite/-/url-parser-lite-0.1.0.tgz#4679720fd7448d42357d1c8c0a6ece95174e864e"
 
 url-search-params@^0.10.0:
   version "0.10.0"
