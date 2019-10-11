@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Step-by-step guide available at [ReactiveSearch Quickstart Doc](https://opensource.appbase.io/reactive-manual/getting-started/reactivesearch.html).
+Step-by-step guide available at [ReactiveSearch Quickstart Doc](https://docs.appbase.io/docs/reactivesearch/v3/overview/quickstart/).
 
 ### Develop
 
