@@ -1,88 +1,102 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   ReactiveBase,
-  CategorySearch,
+  DataSearch,
+  MultiList,
+  ReactiveList,
   SingleRange,
-  ResultCard,
-  ReactiveList
+  ResultCard
 } from "@appbaseio/reactivesearch";
 
-const { ResultCardsWrapper } = ReactiveList;
-
-class App extends Component {
-  render() {
-    return (
-      <ReactiveBase
-        app="carstore-dataset"
-        credentials="4HWI27QmA:58c731f7-79ab-4f55-a590-7e15c7e36721"
-      >
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <div
-            style={{ display: "flex", flexDirection: "column", width: "40%" }}
-          >
-            <CategorySearch
-              componentId="searchbox"
-              dataField="name"
-              categoryField="brand.raw"
-              placeholder="Search for cars"
-              style={{
-                padding: "5px",
-                marginTop: "10px"
-              }}
-            />
-            <SingleRange
-              componentId="ratingsfilter"
-              title="Filter by ratings"
-              dataField="rating"
-              data={[
-                { start: "4", end: "5", label: "4 stars and up" },
-                { start: "3", end: "5", label: "3 stars and up" },
-                { start: "2", end: "5", label: "2 stars and up" },
-                { start: "1", end: "5", label: "see all ratings" }
-              ]}
-              defaultSelected="4 stars and up"
-              style={{
-                padding: "5px",
-                marginTop: "10px"
-              }}
-            />
-          </div>
+function App() {
+  return (
+    <ReactiveBase
+      url="https://appbase-demo-ansible-abxiydt-arc.searchbase.io"
+      app="good-books-ds"
+      credentials="04717bb076f7:be54685e-db84-4243-975b-5b32ee241d31"
+      enableAppbase
+    >
+      {/* other components will go here. */}
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            width: "30%",
+            margin: "10px"
+          }}
+        >
+          <MultiList
+            componentId="authorsfilter"
+            dataField="authors.keyword"
+            title="Filter by Authors"
+            aggregationSize={5}
+          />
+          <SingleRange
+            componentId="ratingsfilter"
+            dataField="average_rating"
+            title="Filter by Ratings"
+            data={[
+              { start: 4, end: 5, label: "4 stars and above" },
+              { start: 3, end: 5, label: "3 stars and above" },
+              { start: 1, end: 5, label: "Any ratings" }
+            ]}
+            defaultValue="4 stars and up"
+          />
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", width: "66%" }}>
+          <DataSearch
+            style={{
+              marginTop: "35px"
+            }}
+            componentId="searchbox"
+            dataField={[
+              "authors",
+              "authors.autosuggest",
+              "original_title",
+              "original_title.autosuggest"
+            ]}
+            fieldWeights={[3, 1, 5, 1]}
+            placeholder="Search for books or authors"
+          />
           <ReactiveList
-            componentId="result"
+            componentId="results"
             dataField="name"
-            title="Results"
-            from={0}
             size={6}
             pagination={true}
             react={{
-              and: ["searchbox", "ratingsfilter"]
+              and: ["searchbox", "ratingsfilter", "authorsfilter"]
             }}
-            style={{
-              width: "60%",
-              textAlign: "center"
-            }}
+            style={{ textAlign: "center" }}
             render={({ data }) => (
-              <ResultCardsWrapper>
-                {data.map(item => (
+              <ReactiveList.ResultCardsWrapper>
+                {data.map((item) => (
                   <ResultCard key={item._id}>
-                    <ResultCard.Image src={item.image} />
+                    <ResultCard.Image
+                      style={{
+                        backgroundSize: "cover",
+                        backgroundImage: `url(${item.image})`
+                      }}
+                    />
                     <ResultCard.Title
                       dangerouslySetInnerHTML={{
-                        __html: item.name
+                        __html: item.original_title
                       }}
                     />
                     <ResultCard.Description>
-                      {item.brand + " " + "★".repeat(item.rating)}
+                      {item.authors +
+                        " " +
+                        "*".repeat(item.average_rating_rounded)}
                     </ResultCard.Description>
                   </ResultCard>
                 ))}
-              </ResultCardsWrapper>
+              </ReactiveList.ResultCardsWrapper>
             )}
           />
         </div>
-      </ReactiveBase>
-    );
-  }
+      </div>
+    </ReactiveBase>
+  );
 }
 
 export default App;
