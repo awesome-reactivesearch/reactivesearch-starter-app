@@ -29,6 +29,7 @@ function App() {
           }}
         >
           <MultiList
+            className="multilist"
             componentId="authorsfilter"
             dataField="authors.keyword"
             title="Filter by Authors"
