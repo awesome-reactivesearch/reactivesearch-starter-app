@@ -8,6 +8,8 @@ import {
   ResultCard
 } from "@appbaseio/reactivesearch";
 
+import "./styles.css";
+
 function App() {
   return (
     <ReactiveBase
@@ -31,6 +33,9 @@ function App() {
             dataField="authors.keyword"
             title="Filter by Authors"
             aggregationSize={5}
+            innerClass={{
+                input: 'input-class'
+            }}
           />
           <SingleRange
             componentId="ratingsfilter"
