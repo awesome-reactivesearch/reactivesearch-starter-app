@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Step-by-step guide available at [ReactiveSearch Quickstart Doc](https://docs.appbase.io/docs/reactivesearch/v3/overview/quickstart/).
+Step-by-step guide available at [ReactiveSearch Quickstart Doc](https://docs.reactivesearch.io/docs/reactivesearch/react/overview/quickstart/).
 
 ### Develop
 
@@ -19,7 +19,7 @@ should open something like this
 
 The ReactiveSearch components code resides in `src/App.js` file. For building this app, we use:
 
-1. [appbase.io](https://appbase.io) for the backend, any Elasticsearch cluster/index should work.  
+1. [ReactiveSearch.io](https://reactivesearch.io) for the search backend: You can use ReactiveSearch as a hosted Elasticsearch or OpenSearch cloud service, or connect to an existing Elasticsearch or OpenSearch deployment
 2. A simple flex based layout system, you can use Materialize's or Bootstrap's grid, or roll your own layout - the ReactiveSearch components are layout agnostic.  
 3. The following components:
  - **ReactiveBase** - ReactiveBase is the provider component that connects the UI with the backend app.
