@@ -1,7 +1,7 @@
 import React from "react";
 import {
   ReactiveBase,
-  DataSearch,
+  SearchBox,
   MultiList,
   ReactiveList,
   SingleRange,
@@ -15,8 +15,7 @@ function App() {
     <ReactiveBase
       url="https://appbase-demo-ansible-abxiydt-arc.searchbase.io"
       app="good-books-ds"
-      credentials="04717bb076f7:be54685e-db84-4243-975b-5b32ee241d31"
-      enableAppbase
+      credentials="04717bb076f7:be54685e-db84-4243-975b-5b32ee241d31"      
     >
       {/* other components will go here. */}
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -51,7 +50,7 @@ function App() {
           />
         </div>
         <div style={{ display: "flex", flexDirection: "column", width: "66%" }}>
-          <DataSearch
+          <SearchBox
             style={{
               marginTop: "35px"
             }}
